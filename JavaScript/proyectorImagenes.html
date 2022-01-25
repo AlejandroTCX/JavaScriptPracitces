@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Poryector de imagenes</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="contenedor">
+
+
+        <div class="Atras botones">
+            &#60
+        </div>
+
+        <div class="adelante botones">
+            &#62
+        </div>
+        <img src="" alt="" id="imagen">
+    </div>
+    <script type="text/javascript">
+        var imagenes = ['thom-holmes-qluz8quWa5Q-unsplash.jpg', 'k-mitch-hodge-PigvwBawbg0-unsplash.jpg', 'chris-curry-ybxugA_CWoM-unsplash.jpg'],
+            cont = 0;
+
+        function carrusel(contenedor) {
+            contenedor,
+            addEventListener('Click', e => {
+                let atras = contenedor.querySelector('.atras'),
+                    addelante = contenedor.querySelector('.adelante'),
+                    img = contenedor.querySelector('img'),
+                    tgt = e.target;
+
+                if (tgt == atras) {
+                    if (cont > 0) {
+                        img.src = imagenes[cont - 1];
+                        cont--;
+                    }
+                } else {
+                    img.src = imagenes[imagenes.length - 1];
+                    cont = imagenes.length - 1;
+
+
+                }
+
+                if (tgt == addelante) {
+                    if (cont < imagenes.length - 1) {
+                        img.src = imagenes[cont + 1];
+                        cont++;
+                    }
+                } else {
+                    img.src = imagenes[0];
+                    cont = 0;
+
+
+                }
+
+            });
+
+
+        }
+
+        document.addEventListener('DOMCContentLoaded', () => {
+            let contenedor = document.querySelector('contenedor');
+
+            carrusel(contenedor);
+        })
+    </script>]
+</body>

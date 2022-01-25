@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadena de texto a arreglo</title>
+    <script type="text/javascript">
+        function verificar() {
+            var c = 0;
+            if (document.forms['evaluation']['radio1'][2].checked) {
+                c++;
+            }
+            if (document.forms['evaluation']['radio2'][1].checked) {
+                c++
+            }
+            if (document.forms['evaluation']['radio3'][0].checked) {
+                c++
+            }
+            alert('Tu resultado  ' + c + ' es 3 ');
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="evaluation" method="">
+
+        <label>1. ¿El mejor jugador de la historia del futbol?</label>
+        <p>
+            <input type="radio" name="radio1" id="radio1" />Robert Lewandoski<br />
+            <input type="radio" name="radio1" id="radio1" />Cristiano Ronaldo<br />
+            <input type="radio" name="radio1" id="radio1" />Lionel Messi<br />
+            <input type="radio" name="radio1" id="radio1" />Diego Maradona<br />
+        </p>
+        <hr />
+        <label>2. ¿Quién es el máximo anotador en la historia?</label>
+        <p>
+            <input type="radio" name="radio2" id="radio2" />Pelé<br />
+            <input type="radio" name="radio2" id="radio2" />Crsitiano Ronaldo<br />
+            <input type="radio" name="radio2" id="radio2" />Lionel Messi<br />
+            <input type="radio" name="radio2" id="radio2" />Romario<br />
+        </p>
+        <hr />
+        <label>3. ¿Cuál es el país con más copas del mundo?</label>
+        <p>
+            <input type="radio" name="radio3" id="radio3" />Brasil<br />
+            <input type="radio" name="radio3" id="radio3" />Alemania<br />
+            <input type="radio" name="radio3" id="radio3" />Uruguay<br />
+            <input type="radio" name="radio3" id="radio3" />Francia<br />
+        </p>
+        <hr />
+
+
+
+    </form>
+    <center>
+        <input type="button" name="result" id="result" value="Comprobar respuestas" onclick="verificar()" />
+    </center>
+</body>
+
+</html>

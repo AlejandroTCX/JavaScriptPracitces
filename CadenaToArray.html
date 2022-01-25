@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadena de texto a arreglo</title>
+    <script type="text/javascript">
+        function stringToArray() {
+            var cadena = document.getElementById("Cadena").value;
+             cadena.split();
+
+            document.write('<p> Tamaño del arreglo ' + cadena.length + '<p>');
+                for (let invertArray = cadena.length-1 ; invertArray>=0; invertArray++) {
+                    document.write(cadena[invertArray]);
+                }
+            document.write('Arreglo de de la A a la Z'+ cadena.sort());
+            document.write('Arreglo de la Za la A'+ cadena.reverse());
+   
+
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <table>
+            <tr>
+                <td><label>Ingrese una cadena de texto para convertir a arreglo</label></td>
+                <td><input type="text" name="usuario" id="usuario"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="button" name="btnVerifivaca" id="btnVerifica" onclick="stringToArray()" value="Convertir a arreglo" style="width: 50%"> </td>
+            </tr>
+        </table>
+    </center>
+
+</body>
+
+</html>
